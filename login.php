@@ -43,35 +43,9 @@ and open the template in the editor.
       <link href="/css/login.css" rel="stylesheet" type="text/css"/>
       <link href="/css/main.css" rel="stylesheet" type="text/css"/>
       <script src="/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+      <script src="/js/inputAnimations.js" type="text/javascript"></script>
       <script type="text/javascript">
-          $(document).ready(function(){
-              $("input").on("focus",function(){
-                 $(this).animate({
-                    'opacity': '1' 
-                 },80); 
-              });
-              $("input").on("focusout",function(){
-                 $(this).animate({
-                    'opacity': '0.6' 
-                 },80); 
-                 var T = $.trim($(this).val());
-                 if(T === ""){
-                    $(this).parent().addClass("has-error");
-                 }else{
-                    $(this).parent().removeClass("has-error");
-                 }
-              });
-              
-              $(".submit").hover(function(){
-                  $(this).animate({
-                    'opacity': '1' 
-                 },50);
-              },function(){
-                  $(this).animate({
-                    'opacity': '0.6' 
-                 },50);
-              });
-          });
+
       </script>
    </head>
    
@@ -84,11 +58,11 @@ and open the template in the editor.
                        <div class="form-group row">
                            <div class="form-group inner-addon left-addon col-md-8 col-md-offset-2 col-form-label">
                               <i class="glyphicon glyphicon-user input-lg"></i>
-                              <input type = "text" autocomplete="off" required name = "username" placeholder="username or email" class="form-control input-lg danger"/><br /><br />
+                              <input type = "text" autocomplete="off" required name = "username" placeholder="username or email" class="form-control input-lg danger req"/>
                            </div>
                            <div class="form-group inner-addon left-addon col-md-8 col-md-offset-2 col-form-label has-danger">
                                <i class="glyphicon glyphicon-ok input-lg"></i>
-                               <input type = "password" name = "password" required placeholder="password" class="form-control input-lg form-control-danger"/><br/><br />
+                               <input type = "password" name = "password" required placeholder="password" class="form-control input-lg form-control-danger req"/>
                            </div>
                            
                            <div class="col-md-6 col-md-offset-3">

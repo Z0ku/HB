@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/rizaller/NetBeansProjects/HomeBase/php/getUserInfo.php</file>
             <file>file:/home/rizaller/NetBeansProjects/HomeBase/pages/register.php</file>
             <file>file:/home/rizaller/NetBeansProjects/HomeBase/login.php</file>
-            <file>file:/home/rizaller/NetBeansProjects/HomeBase/css/login.css</file>
             <file>file:/home/rizaller/NetBeansProjects/HomeBase/index.php</file>
-            <file>file:/home/rizaller/NetBeansProjects/HomeBase/css/innerIcon.css</file>
+            <file>file:/home/rizaller/NetBeansProjects/HomeBase/php/config.php</file>
             <file>file:/home/rizaller/NetBeansProjects/HomeBase/css/register.css</file>
+            <file>file:/home/rizaller/NetBeansProjects/HomeBase/js/inputAnimations.js</file>
         </group>
     </open-files>
 </project-private>

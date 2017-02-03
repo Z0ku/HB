@@ -9,8 +9,34 @@ and open the template in the editor.
 */
 
 .register-form{
-    margin-top: 75px;
+    margin-top: 100px;
 }
 .col-form-label{
     height:55px !important;
+}
+input,select{
+    border-radius: 20px !important;
+    opacity: 0.6;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.date input{
+    border-radius: 0px !important;
+}
+#month{
+    border-radius: 100px 0px 0px 100px !important;
+    width: 65px;
+}
+#day{
+    border-radius: 0px !important;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+#year{
+    border-radius: 0px 100px 100px 0px !important;
+    width: 80px
 }
