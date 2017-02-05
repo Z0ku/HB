@@ -18,6 +18,7 @@ input{
     margin-top:0px !important;
     margin-bottom:15px;
     height:10px !important;
+    opacity: 0;
 }
 .has-error .form-control{
     border-color: red !important;

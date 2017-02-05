@@ -7,7 +7,7 @@ and open the template in the editor.
 <?php
    include('php/session.php');
 ?>
-<html">
+<html>
    
    <head>
       <title>Welcome </title>
