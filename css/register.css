@@ -29,7 +29,7 @@ input,select{
 }
 #month{
     border-radius: 100px 0px 0px 100px !important;
-    width: 65px;
+    width: 90px;
 }
 #day{
     border-radius: 0px !important;
@@ -38,5 +38,20 @@ input,select{
 }
 #year{
     border-radius: 0px 100px 100px 0px !important;
-    width: 80px
+    width: 110px
+}
+label{
+   font-size: 20px;
+}
+.submitRegister{
+    margin-top: 15px;
+}
+.glyphicon{
+    margin-left: 10px;
+}
+.has-error .form-control{
+    border-width: 3px !important;
+}
+.has-success .form-control{
+    border-width: 3px !important;
 }

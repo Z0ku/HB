@@ -12,16 +12,12 @@ input{
     border-radius: 20px !important;
     opacity: 0.6;
 }
-.error{
-    font-size:17px; 
-    color:#cc0000; 
-    margin-top:0px !important;
-    margin-bottom:15px;
-    height:10px !important;
-    opacity: 0;
-}
+
 .has-error .form-control{
     border-color: red !important;
+}
+.has-error .form-control{
+    border-width: 3px !important;
 }
 i{
     color: #444;

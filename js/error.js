@@ -15,3 +15,6 @@ $(document).ready(function(){
           opacity: '1'  
         },200);
     } 
+    function clearError(result){
+        $(".error").html("");
+    }

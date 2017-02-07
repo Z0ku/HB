@@ -9,7 +9,6 @@ session_start();
      }else{
          echo "#Wrong Password";
      }
-     
  }
 /* 
  * To change this license header, choose License Headers in Project Properties.

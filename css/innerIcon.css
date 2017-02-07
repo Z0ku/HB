@@ -9,6 +9,7 @@ and open the template in the editor.
 */
 
 /* enable absolute positioning */
+/* enable absolute positioning */
 .inner-addon { 
     position: relative; 
 }
@@ -22,7 +23,7 @@ and open the template in the editor.
 
 /* align icon */
 .left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 20px;}
+.right-addon .glyphicon { right: 0px;}
 
 /* add padding  */
 .left-addon input  { padding-left:  30px; }

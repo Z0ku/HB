@@ -22,6 +22,7 @@ and open the template in the editor.
               var pass = "";
               var user = "";
               var confirm = 0;
+              var S = 0;
               $("#myCarousel").carousel('pause');
              
              function checkUser(){
@@ -42,27 +43,30 @@ and open the template in the editor.
                         }
                 }); 
              }
+            function set(){
+                 S = 1;
+             }
              function confirmUser(){
-                var ret = 0;
                 $.ajax({
                         type: 'post',
                         url: '/php/confirmUser.php',
                         data: {user: user,userPass:pass,inputPass:$(".pass").val()},                        
                         success: function(result) {
                             if(result.charAt(0) === '#'){
-                                
                                 showError(result);
+                            }else{
+                                set();
                             }
                         }
                     });
-                if($(".error").html() === ""){
-                    ret = 1;
-                }
-                return ret;
+               
              }
+
              $(document).on("keypress",function(event){
                  if(event.keyCode === 13 && pass===""){
                      checkUser();
+                 }else if(event.keyCode === 13){
+                     confirmUser();
                  }
              });
              $(".submitUser").on("click",function(){
@@ -72,8 +76,8 @@ and open the template in the editor.
              $("#login").on("submit",function(event){
                 
                  if(pass!== ""){
-                    
-                    if(confirmUser() === 0){
+                    confirmUser();
+                    if(S !== 1){
                         event.preventDefault();
                     }
                  }
@@ -96,7 +100,7 @@ and open the template in the editor.
                                <div class="text-center user d-block">
                                   <div class="form-group inner-addon left-addon col-md-8 col-md-offset-2 col-form-label">
                                       <i class="glyphicon glyphicon-user input-lg"></i>
-                                      <input type = "text" autocomplete="off" required name = "username" placeholder="username or email" class="username form-control input-lg danger req"/>
+                                      <input type = "text" autocomplete="off" required name = "username" placeholder="username" class="username form-control input-lg danger req"/>
                                   </div>
                                   <div class="col-md-6 col-md-offset-3">
                                       <input  type="button" value = " Next " class="form-control submitUser"/><br />
