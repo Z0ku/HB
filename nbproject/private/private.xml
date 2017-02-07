@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/HB/php/session.php</file>
+            <file>file:/C:/xampp/htdocs/HB/php/logout.php</file>
             <file>file:/C:/xampp/htdocs/HB/php/loginCheck.php</file>
-            <file>file:/C:/xampp/htdocs/HB/php/config.php</file>
+            <file>file:/C:/xampp/htdocs/HB/css/login.css</file>
+            <file>file:/C:/xampp/htdocs/HB/php/getUserInfo.php</file>
+            <file>file:/C:/xampp/htdocs/HB/pages/register.html</file>
+            <file>file:/C:/xampp/htdocs/HB/php/confirmUser.php</file>
+            <file>file:/C:/xampp/htdocs/HB/js/error.js</file>
             <file>file:/C:/xampp/htdocs/HB/index.php</file>
-            <file>file:/C:/xampp/htdocs/HB/login.php</file>
+            <file>file:/C:/xampp/htdocs/HB/login.html</file>
+            <file>file:/C:/xampp/htdocs/HB/js/inputAnimations.js</file>
         </group>
     </open-files>
 </project-private>

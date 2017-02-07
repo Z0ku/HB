@@ -17,8 +17,15 @@ and open the template in the editor.
           <script type="text/javascript">
           $(document).ready(function(){
               $("input[name*='username']").on("focusout",function(){
-                  $(".hid").load("/php/getUserInfo.php");
-                  console.log($(".hid").html());
+                  $.ajax({
+                      type: "post",
+                      url: "/php/getUserInfo.php",
+                      data: "username="+ $(".newUsername").val(),                        
+                      success: function(result){
+                          
+                      }
+                  });
+                  
                   
               });
               var ctr = 0;
@@ -49,7 +56,7 @@ and open the template in the editor.
                                   <div class="row">
                                       <div class="col-md-12 form-group">
                                         <label>Username</label>
-                                        <input type="text" class="form-control req" placeholder="Username">
+                                        <input type="text" class="form-control req" placeholder="Username" class="newUsername">
                                       </div>
                                       <div class="col-md-12 form-group">
                                         <label>Email address</label>

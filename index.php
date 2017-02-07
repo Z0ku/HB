@@ -14,8 +14,8 @@ and open the template in the editor.
    </head>
    
    <body>
-      <h1>Welcome <?php echo $login_session; ?></h1> 
-      <h2><a href = "php/logout.php">Sign Out</a></h2>
+      <h1>Welcome <?php echo $loginUser; ?></h1> 
+      <h2><a href = "/php/logout.php">Sign Out</a></h2>
    </body>
    
 </html>

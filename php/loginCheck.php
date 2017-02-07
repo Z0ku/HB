@@ -1,7 +1,6 @@
 <?php
    
    include("config.php");
-   session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
@@ -17,7 +16,7 @@
       if($count != 0) {
          $row = $result->fetch_assoc();
          echo $row["password"];
-            
+         header("/index.php");   
          
       }else {
           
