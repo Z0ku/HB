@@ -6,6 +6,7 @@ session_start();
       $inputPass = md5($_POST['inputPass']); 
      if($userPass === $inputPass){
          $_SESSION['login_user'] = $user;
+         echo "success";
      }else{
          echo "#Wrong Password";
      }

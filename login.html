@@ -28,7 +28,7 @@ and open the template in the editor.
              function checkUser(){
                 $.ajax({
                         type: 'post',
-                        url: '/php/loginCheck.php',
+                        url: 'php/loginCheck.php',
                         data: {username: $(".username").val()},                        
                         success: function(result) {
                            if(result.charAt(0) !== '#'){
@@ -49,17 +49,17 @@ and open the template in the editor.
              function confirmUser(){
                 $.ajax({
                         type: 'post',
-                        url: '/php/confirmUser.php',
+                        url: 'php/confirmUser.php',
                         data: {user: user,userPass:pass,inputPass:$(".pass").val()},                        
                         success: function(result) {
                             if(result.charAt(0) === '#'){
                                 showError(result);
                             }else{
-                                set();
+                                window.location.href = "index.php";
                             }
                         }
                     });
-               
+
              }
 
              $(document).on("keypress",function(event){
@@ -71,16 +71,9 @@ and open the template in the editor.
              });
              $(".submitUser").on("click",function(){
                     checkUser();
-              
              });
-             $("#login").on("submit",function(event){
-                
-                 if(pass!== ""){
+            $(".submit").on("click",function(){
                     confirmUser();
-                    if(S !== 1){
-                        event.preventDefault();
-                    }
-                 }
              });
           });
       </script>
@@ -90,7 +83,7 @@ and open the template in the editor.
        <div class="container-fluid">
            <div class="row">
                <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 login-form">
-                   <form action="index.php" method = "post" id="login">
+                  
                        <h1 class="text-center">login</h1>
                        <div class="form-group row">
                         <div id="myCarousel" class="carousel slide" data-interval="500">
@@ -118,7 +111,7 @@ and open the template in the editor.
                                        <input type = "password" name = "password" required placeholder="password" class="pass form-control input-lg form-control-danger req"/>
                                     </div>
                                     <div class="col-md-6 col-md-offset-3">
-                                        <input  type="submit" value = " Submit " class="form-control input-lg submit"/><br />
+                                        <input  type="button" value = " Sign In " class="form-control input-lg submit"/><br />
                                     </div>
                                     </div>
                               </div>
@@ -129,7 +122,6 @@ and open the template in the editor.
                             
                            </div>
                        </div>
-                   </form>
                </div>
            </div>
        </div>    

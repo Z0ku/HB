@@ -15,7 +15,7 @@ and open the template in the editor.
    
    <body>
       <h1>Welcome <?php echo $loginUser; ?></h1> 
-      <h2><a href = "/php/logout.php">Sign Out</a></h2>
+      <h2><a href = "php/logout.php">Sign Out</a></h2>
    </body>
    
 </html>

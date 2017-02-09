@@ -4,7 +4,7 @@
    $loginUser = "";
    if(!isset($_SESSION['login_user'])){
       
-      header("location: /login.html");
+      header("location: ../login.html");
    }else{
         $loginUser = $_SESSION['login_user'];
    }
