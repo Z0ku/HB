@@ -19,9 +19,15 @@ and open the template in the editor.
 
  <body>
    <?php require('php/comp/nav.php'); ?>
-   <div class='container-fluid'>
+   <div class='container-fluid page'>
       <div class='row'>
         <?php require('php/comp/side-nav.php');?>
+        <div class='col-md-2 buffer'></div>
+        <div class='col-md-10'>
+          <div class='container'>
+            <?php require('php/pages/viewCollection.php'); ?>
+          </div>
+        </div>
       </div>
    </div>
  </body>

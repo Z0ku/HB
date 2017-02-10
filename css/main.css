@@ -12,10 +12,11 @@ and open the template in the editor.
     src: url("../fonts/Righteous-Regular.ttf");
 }
 body{
-    background: url(../img/main.png);
+    background: #233237;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    color: #C5C1C0 !important;
     font-family: righteous !important;
 }
 
@@ -23,7 +24,7 @@ img{
    height: 100% !important;
 }
 .navbar-default{
-   background-color: #233237;
+   background-color: #0A1612;
    margin-bottom: 0px !important;
    border: none;
    border-radius: 0px !important;
@@ -31,7 +32,23 @@ img{
 .side-nav{
   height: 100%;
   position: fixed;
-  background-color: #233237;
+  background-color: #0A1612;
+}
+.side-sites{
+  margin-top: 40px;
+}
+.side-sites ul{
+  padding: 0;
+  list-style-type: none;
+}
+.side-sites li{
+  font-size: 30px;
+  margin-top: 18px;
+}
+
+
+a{
+  color: inherit;
 }
 img{
   width: 100%;
