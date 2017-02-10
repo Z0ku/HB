@@ -53,8 +53,27 @@ a{
 img{
   width: 100%;
 }
+.header{
+  border-bottom: 1px solid gray;
+}
+.cCont{
+  height:200px;
+  margin-top: 50px;
+  position: relative;
+}
+.cLink{
+  height:100%;
+  width:100%;
+  top:20px;
+  
+  position:absolute;
+}
+.title{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .profile-pic{
-  height: 175px;
+  height: 190px;
 }
 .img-container{
   padding: 0;

@@ -11,10 +11,20 @@ and open the template in the editor.
 
  <head>
     <title>HB</title>
-    <?php
-          require('php/comp/links.php');
+    <?php require('php/comp/links.php');?>
+    <script>
+      $(document).ready(function(){
+        $.ajax({
+          type:'get',
+          url:"php/pages/viewCollection.php",
+          data: {user:'<?php echo $loginUser?>'},
+          success: function(result){
+            $(".view").html(result);
+          }
+        });
+      });
 
-    ?>
+    </script>
  </head>
 
  <body>
@@ -24,8 +34,8 @@ and open the template in the editor.
         <?php require('php/comp/side-nav.php');?>
         <div class='col-md-2 buffer'></div>
         <div class='col-md-10'>
-          <div class='container'>
-            <?php require('php/pages/viewCollection.php'); ?>
+          <div class='container view'>
+
           </div>
         </div>
       </div>
