@@ -22,8 +22,25 @@ body{
 img{
    height: 100% !important;
 }
-.login-form{
-    margin-top: 200px !important;
+.navbar-default{
+   background-color: #233237;
+   margin-bottom: 0px !important;
+   border: none;
+   border-radius: 0px !important;
+}
+.side-nav{
+  height: 100%;
+  position: fixed;
+  background-color: #233237;
+}
+img{
+  width: 100%;
+}
+.profile-pic{
+  height: 175px;
+}
+.img-container{
+  padding: 0;
 }
 .form-control:focus{
     box-shadow: none;

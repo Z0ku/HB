@@ -76,7 +76,7 @@ and open the template in the editor.
    <body>
        <div class="container-fluid">
            <div class="row">
-               <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 login-form">
+               <div class="col-md-6 col-md-offset-3 login-form">
 
                        <h1 class="text-center">login</h1>
                        <div class="form-group row">

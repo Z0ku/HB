@@ -9,16 +9,21 @@ and open the template in the editor.
 ?>
 <html>
 
-   <head>
-      <title>HB</title>
-      <?php require('php/comp/links.php');
-            require('php/comp/nav.php');
-      ?>
-   </head>
+ <head>
+    <title>HB</title>
+    <?php
+          require('php/comp/links.php');
 
-   <body>
-      <h1>Welcome <?php echo $loginUser; ?></h1>
-      <h2><a href = "php/logout.php">Sign Out</a></h2>
-   </body>
+    ?>
+ </head>
+
+ <body>
+   <?php require('php/comp/nav.php'); ?>
+   <div class='container-fluid'>
+      <div class='row'>
+        <?php require('php/comp/side-nav.php');?>
+      </div>
+   </div>
+ </body>
 
 </html>

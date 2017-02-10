@@ -124,7 +124,7 @@ and open the template in the editor.
                <div class="col-md-8 col-md-offset-2 register-form">
                    <div class="row">
                        <div class="col-md-12">
-                            <div class="col-md-4  col-md-offset-4 text-center">
+                            <div class="col-md-6  col-md-offset-3 text-center">
                                 <h1>register</h1>
                                <div class="row">
                                    <div class="col-md-12 form-group ">
