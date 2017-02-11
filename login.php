@@ -11,66 +11,7 @@ and open the template in the editor.
       <title>Login Page</title>
       <?php require('php/comp/links.php')?>
       <link href="css/loginStyle.css" rel="stylesheet" type="text/css"/>
-      <script type="text/javascript">
-          $(document).ready(function(){
-              var pass = "";
-              var user = "";
-              var confirm = 0;
-              var S = 0;
-              $("#myCarousel").carousel('pause');
 
-             function checkUser(){
-                $.ajax({
-                        type: 'get',
-                        url: 'php/loginCheck.php',
-                        data: {username: $(".username").val()},
-                        success: function(result) {
-                           if(result.charAt(0) !== '#'){
-                               pass = result;
-                               $(".error").html("");
-                               user = $(".username").val();
-                               $("#myCarousel").carousel('next');
-
-                           }else{
-                               showError(result);
-                           }
-                        }
-                });
-             }
-            function set(){
-                 S = 1;
-             }
-             function confirmUser(){
-                $.ajax({
-                        type: 'get',
-                        url: 'php/confirmUser.php',
-                        data: {user: user,userPass:pass,inputPass:$(".pass").val()},
-                        success: function(result) {
-                            if(result.charAt(0) === '#'){
-                                showError(result);
-                            }else{
-                                window.location.href = "index.php";
-                            }
-                        }
-                    });
-
-             }
-
-             $(document).on("keypress",function(event){
-                 if(event.keyCode === 13 && pass===""){
-                     checkUser();
-                 }else if(event.keyCode === 13){
-                     confirmUser();
-                 }
-             });
-             $(".submitUser").on("click",function(){
-                    checkUser();
-             });
-            $(".submit").on("click",function(){
-                    confirmUser();
-             });
-          });
-      </script>
    </head>
 
    <body>
@@ -122,3 +63,67 @@ and open the template in the editor.
 
    </body>
 </html>
+<?php require('php/comp/jslinks.php')?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var pass = "";
+        var user = "";
+        var confirm = 0;
+        var S = 0;
+        var E = $(".error");
+        $("#myCarousel").carousel('pause');
+
+       function checkUser(){
+          $.ajax({
+                  type: 'get',
+                  url: 'php/loginCheck.php',
+                  data: {username: $(".username").val()},
+                  success: function(result) {
+                     if(result.charAt(0) !== '#'){
+                         pass = result;
+                         clearError(E);
+                         user = $(".username").val();
+                         $("#myCarousel").carousel('next');
+
+                     }else{
+                         showError(result,E);
+                     }
+                  }
+          });
+       }
+      function set(){
+           S = 1;
+       }
+       function confirmUser(){
+          $.ajax({
+                  type: 'get',
+                  url: 'php/confirmUser.php',
+                  data: {user: user,userPass:pass,inputPass:$(".pass").val()},
+                  success: function(result) {
+                      if(result.charAt(0) === '#'){
+                          showError(result,E);
+                      }else{
+                  //      showError(result,E);
+                          window.location.href = "index.php";
+                      }
+                  }
+              });
+
+       }
+
+       $(document).on("keypress",function(event){
+           if(event.keyCode === 13 && pass===""){
+
+               checkUser();
+           }else if(event.keyCode === 13){
+               confirmUser();
+           }
+       });
+       $(".submitUser").on("click",function(){
+              checkUser();
+       });
+      $(".submit").on("click",function(){
+              confirmUser();
+       });
+    });
+</script>

@@ -12,30 +12,20 @@ and open the template in the editor.
  <head>
     <title>HB</title>
     <?php require('php/comp/links.php');?>
-    <script>
-      $(document).ready(function(){
-        $.ajax({
-          type:'get',
-          url:"php/pages/viewCollection.php",
-          data: {user:'<?php echo $loginUser?>'},
-          success: function(result){
-            $(".view").html(result);
-          }
-        });
-      });
 
-    </script>
  </head>
 
  <body>
-   <?php require('php/comp/nav.php'); ?>
+
    <div class='container-fluid page'>
       <div class='row'>
         <?php require('php/comp/side-nav.php');?>
         <div class='col-md-2 buffer'></div>
         <div class='col-md-10'>
-          <div class='container view'>
+          <div class='row'>
+              <div class='col-md-10 col-md-offset-1 view'>
 
+              </div>
           </div>
         </div>
       </div>
@@ -43,3 +33,6 @@ and open the template in the editor.
  </body>
 
 </html>
+<?php require('php/comp/jslinks.php')?>
+<script>
+</script>
