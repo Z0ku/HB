@@ -5,11 +5,13 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-   include('php/session.php');
+   require('php/session.php');
+   require('php/getData.php');
    $owner = $_SESSION['login_user'];
    if(isset($_GET['user'])){
      $owner = $_GET['user'];
    }
+   $ownerId = getUserId($owner,$conn);
 ?>
 <html>
 
@@ -20,7 +22,7 @@ and open the template in the editor.
  </head>
 
  <body>
-  
+
    <div class='container-fluid page'>
       <div class='row'>
         <?php require('php/comp/side-nav.php');?>
@@ -28,7 +30,14 @@ and open the template in the editor.
         <div class='col-md-10'>
           <div class='row'>
               <div class='col-md-10 col-md-offset-1 view'>
-                <?php require('php/comp/collectionsView.php');?>
+                <?php
+                if($ownerId !== FALSE){
+                  include('php/comp/collectionsView.php');
+                }else{
+                ?>
+                <h1>User <?php echo $owner;?> does not exist.</h1>
+
+                <?php } ?>
               </div>
           </div>
         </div>

@@ -1,9 +1,11 @@
 <?php
   require('php/getResultArray.php');
   $def = 'default.png';
-  $sql = "SELECT * FROM collections WHERE user_id={$_SESSION['login_userId']}";
+
+  $sql = "SELECT * FROM collections WHERE user_id={$ownerId}";
   $result = $conn->query($sql);
   $cols = getResultArray($result);
+
 ?>
 <div class='row'>
   <div class='col-md-12 header text-left'>
@@ -31,20 +33,23 @@
       }
          ?>
       <?php
-        foreach($cols as $col){
-            ?>
-            <div class='col-md-12 cCont'>
-              <a href='#' class='text-center row'>
-                <div class='col-md-4 colPicCont text-center'>
-                  <img src='img/collectionPics/default.png'>
-                </div>
-                <div class='col-md-8 text-left'>
-                  <h3><?php echo $col['collName']?></h3>
-                  <p><?php echo $col['collDesc']?></p>
-                </div>
-              </a>
-            </div>
-            <?php
+        if($cols !== FALSE){
+          foreach($cols as $col){
+            $link = "collection.php?id=".$col['coll_id'];
+              ?>
+              <div class='col-md-12 cCont'>
+                <a href='<?php echo $link; ?>' class='text-center row'>
+                  <div class='col-md-4 colPicCont text-center'>
+                    <img src='img/collectionPics/default.png'>
+                  </div>
+                  <div class='col-md-8 text-left'>
+                    <h3><?php echo $col['collName'];?></h3>
+                    <p><?php echo $col['collDesc'];?></p>
+                  </div>
+                </a>
+              </div>
+              <?php
+          }
         }
       ?>
     </div>

@@ -1,7 +1,6 @@
 <?php
   function getResultArray($result){
-    $RA;
-    $num_rows = $result->num_rows;
+    $RA = FALSE;
     $row = $result->fetch_assoc();
     while($row){
       $RA[] = $row;
